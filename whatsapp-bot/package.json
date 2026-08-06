@@ -1,0 +1,25 @@
+{
+  "name": "whatsapp-bot",
+  "version": "1.0.0",
+  "description": "Bot de WhatsApp com mensagens de boas-vindas em grupos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "whatsapp-web.js"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "qrcode": "^1.5.4",
+    "whatsapp-web.js": "^1.25.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
