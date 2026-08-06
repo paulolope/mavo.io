@@ -5,7 +5,11 @@ const qrcode = require('qrcode');
 const WELCOME_MESSAGE = process.env.WELCOME_MESSAGE || 'Olá {user}! Seja muito bem-vindo(a) ao grupo!';
 
 const client = new Client({
-  authStrategy: new LocalAuth()
+  authStrategy: new LocalAuth(),
+  puppeteer: {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu', '--no-first-run', '--ignore-certificate-errors', '--ignore-ssl-errors']
+  }
 });
 
 client.on('qr', async (qr) => {
